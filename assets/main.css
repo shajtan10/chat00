@@ -1,0 +1,43 @@
+body, html{
+	height: 100%;
+}
+
+body{
+	font-family: "Courier";
+	font-size: 15px;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.msg{
+	position: absolute;
+
+	padding: 3px;
+	background: transparent;
+	
+	min-width: 5px;
+}
+
+.msg br{ display: none; }
+
+.msg[contenteditable="true"]{
+	border: 1px solid blue;
+	padding: 2px;
+
+	white-space: nowrap;
+    overflow: hidden;
+}
+
+.msg[contenteditable="true"] *{
+	display: inline;
+	white-space: nowrap;
+}
+
+.msg[contenteditable="true"] br{ display: none; }
+
+.msg[contenteditable="true"].err{
+	border: 1px solid red;
+}
